@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity" >
+
+     <TextView
+        android:id="@+id/ip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ipEdit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="IP"
+        android:textColor="#000000"
+        android:textSize="20dp" >
+    </TextView>
+
+    <EditText
+        android:id="@+id/ipEdit"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/clean"
+        android:text="192.168.1.102"
+        android:textSize="18sp" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/commandView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/command"
+        android:layout_below="@+id/ipEdit"
+        android:gravity="center"
+        android:text="命令"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/command"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ipEdit"
+        android:layout_toRightOf="@+id/clean"
+        android:text="cmd /c dir"
+        android:textSize="18sp" >
+    </EditText>
+
+    <Button
+        android:id="@+id/clean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/send"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/command"
+        android:text="clean" >
+
+    </Button>
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/command"
+        android:layout_toRightOf="@+id/clean"
+        android:text="send" >
+    </Button>
+
+    <TextView
+        android:id="@+id/log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/send"
+        android:focusable="true"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:text="msg:"
+        android:textColor="#16111a" />
+
+</RelativeLayout>
